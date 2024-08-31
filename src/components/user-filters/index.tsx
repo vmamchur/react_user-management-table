@@ -3,6 +3,8 @@ import { userActions } from "../../redux/users-slice";
 import { IUserFilters } from "../../types/user-filters.interface";
 import Input from "../ui/input";
 
+import styles from './styles.module.scss';
+
 const UserFilters = () => {
   const dispatch = useAppDispatch();
 
@@ -11,9 +13,9 @@ const UserFilters = () => {
   };
 
   return (
-    <div>
+    <div className={styles.userFilters}>
       <h1>User Filters</h1>
-      <div>
+      <div className={styles.inputContainer}>
         <Input
           onChange={(e) => handleFilterChange("name", e.target.value)}
           placeholder="Name"

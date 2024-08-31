@@ -3,6 +3,8 @@ import { FC } from "react";
 import TableHeader from "./table-header";
 import TableRow from "./table-row";
 
+import styles from "./styles.module.scss";
+
 interface ITableProps {
   columns: string[];
   data: Record<string, string>[];
@@ -10,7 +12,7 @@ interface ITableProps {
 
 const Table: FC<ITableProps> = ({ columns, data }) => {
   return (
-    <table>
+    <table className={styles.table}>
       <TableHeader columns={columns} />
       <tbody>
         {data.map((row) => (
