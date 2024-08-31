@@ -15,8 +15,8 @@ const Table: FC<ITableProps> = ({ columns, data }) => {
     <table className={styles.table}>
       <TableHeader columns={columns} />
       <tbody>
-        {data.map((row) => (
-          <TableRow key={row.id} data={row} />
+        {data.map((row, i) => (
+          <TableRow key={i} data={row} />
         ))}
       </tbody>
     </table>
