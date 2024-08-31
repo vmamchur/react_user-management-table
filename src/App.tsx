@@ -1,7 +1,7 @@
-import "./App.css";
+import UserManagement from "./components/user-management";
 
-function App() {
-  return <div></div>;
-}
+const App = () => {
+  return <UserManagement />;
+};
 
 export default App;
